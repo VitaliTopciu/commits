@@ -9,3 +9,4 @@ main
 main
 
 squash1
+squash2
