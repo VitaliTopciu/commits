@@ -7,3 +7,5 @@ merge3
 main
 main
 main
+
+squash1
