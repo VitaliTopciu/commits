@@ -13,3 +13,4 @@ squash2
 squash3
 
 main
+main
