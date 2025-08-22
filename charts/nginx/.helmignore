@@ -1,0 +1,15 @@
+# Common VCS dirs
+.git/
+.gitignore
+.bzr/
+.hg/
+.svn/
+
+# IDE/editor
+*.swp
+*.bak
+*.tmp
+*.orig
+*.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,57 @@
+image:
+  repository: nginx
+  tag: 1.27.3-alpine
+  pullPolicy: IfNotPresent
+
+replicaCount: 1
+
+service:
+  type: ClusterIP
+  port: 80
+  annotations: {}
+  labels: {}
+
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []
+
+resources: {}
+
+podAnnotations: {}
+podLabels: {}
+
+livenessProbe:
+  enabled: true
+  path: /
+  initialDelaySeconds: 5
+  periodSeconds: 10
+  timeoutSeconds: 1
+  failureThreshold: 3
+  successThreshold: 1
+
+readinessProbe:
+  enabled: true
+  path: /
+  initialDelaySeconds: 3
+  periodSeconds: 10
+  timeoutSeconds: 1
+  failureThreshold: 3
+  successThreshold: 1
+
+affinity: {}
+nodeSelector: {}
+tolerations: []
+
+extraEnv: []
+extraVolumeMounts: []
+extraVolumes: []
+
+fullnameOverride: ""
+nameOverride: ""
